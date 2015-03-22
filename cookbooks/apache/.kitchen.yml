@@ -1,13 +1,15 @@
 ---
 driver:
-  name: vagrant
+  name: digitalocean
 
 provisioner:
   name: chef_zero
 
 platforms:
   - name: ubuntu-12.04
-  - name: centos-6.5
+    driver_config:
+      region: sfo1
+      private_networking: false
 
 suites:
   - name: default
