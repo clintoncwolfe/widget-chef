@@ -3,4 +3,11 @@
 # Recipe:: default
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
-log "TEST KITCHEN IS RUNNING MY CODE!!!"
+
+execute 'apt_update' do
+  command "apt-get update"
+  action :run
+end
+
+package 'apache2'
+
